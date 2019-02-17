@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2019-02-17 - Reading Data in R"
+title:  "2019-02-17 - Book Club"
 date:   2019-02-17 20:30:00 +0200
 ---
 
