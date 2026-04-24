@@ -11,21 +11,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-      </header>
       <section>
-
-      {{ content }}
-
-        <ul>
-          {% for post in site.posts %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+        {{ content }}
       </section>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
