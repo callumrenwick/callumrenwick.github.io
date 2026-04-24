@@ -1,0 +1,61 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #ffffff;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .frog {
+        width: min(60vmin, 480px);
+        height: min(60vmin, 480px);
+        animation: spin 8s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .frog { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="frog" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+         fill="none" stroke="#1a1a1a" stroke-width="3"
+         stroke-linecap="round" stroke-linejoin="round">
+      <!-- body -->
+      <path d="M30 130 Q30 75 100 75 Q170 75 170 130 Q170 165 100 165 Q30 165 30 130 Z"/>
+      <!-- belly curve -->
+      <path d="M55 140 Q100 165 145 140"/>
+      <!-- left eye socket -->
+      <circle cx="70" cy="60" r="22"/>
+      <!-- right eye socket -->
+      <circle cx="130" cy="60" r="22"/>
+      <!-- left pupil -->
+      <circle cx="70" cy="62" r="6" fill="#1a1a1a"/>
+      <!-- right pupil -->
+      <circle cx="130" cy="62" r="6" fill="#1a1a1a"/>
+      <!-- mouth -->
+      <path d="M70 115 Q100 135 130 115"/>
+      <!-- left front leg -->
+      <path d="M40 150 Q25 165 30 178 M30 178 L22 178 M30 178 L30 186 M30 178 L38 184"/>
+      <!-- right front leg -->
+      <path d="M160 150 Q175 165 170 178 M170 178 L178 178 M170 178 L170 186 M170 178 L162 184"/>
+    </svg>
+  </body>
+</html>
